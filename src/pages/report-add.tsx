@@ -12,56 +12,38 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 const steps = [
   {
     label: 'tuto',
-    description: `Dépose une plainte pour greenwashing en 3 étapes`,
     step_name: "tuto",
   },
   {
     label: 'Signaler une pub',
-    description:
-      'An ad group contains one or more ads which target a shared set of keywords.',
       step_name: "add_content",
   },
   {
     label: 'Description',
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
     step_name: "desc",
 
   },
   {
     label: 'Pub déjà signalées',
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
     step_name: "compare",
 
   },
   {
     label: 'Qualifier ma plainte',
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
     step_name: "qualify_1",
 
   },
   {
     label: 'Qualifier ma plainte',
-    description: `Etape potentielle selon selection rpécédente, A TESTER`,
     step_name: "qualify_2",
   },
   {
     label: 'Ma plainte est prête',
-    description: `récap`,
     step_name: "ready",
 
   },
   {
     label: '',
-    description: `bravo`,
     step_name: "welldone",
   },
 ];
