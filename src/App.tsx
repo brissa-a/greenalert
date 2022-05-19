@@ -1,7 +1,8 @@
 import React from 'react';
-import './App.css';
+
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
+import './App.css';
 import ReportAnAdd from './pages/report-add';
 import AboutGreenwashing from './pages/about-greenwashing';
 
