@@ -13,11 +13,13 @@ const steps = [
   {
     label: 'tuto',
     description: `Dépose une plainte pour greenwashing en 3 étapes`,
+    step_name: "tuto",
   },
   {
     label: 'Signaler une pub',
     description:
       'An ad group contains one or more ads which target a shared set of keywords.',
+      step_name: "add_content",
   },
   {
     label: 'Description',
@@ -25,6 +27,8 @@ const steps = [
               and learn how to enhance your ads using features like ad extensions.
               If you run into any problems with your ads, find out how to tell if
               they're running and how to resolve approval issues.`,
+    step_name: "desc",
+
   },
   {
     label: 'Pub déjà signalées',
@@ -32,6 +36,8 @@ const steps = [
               and learn how to enhance your ads using features like ad extensions.
               If you run into any problems with your ads, find out how to tell if
               they're running and how to resolve approval issues.`,
+    step_name: "compare",
+
   },
   {
     label: 'Qualifier ma plainte',
@@ -39,18 +45,24 @@ const steps = [
               and learn how to enhance your ads using features like ad extensions.
               If you run into any problems with your ads, find out how to tell if
               they're running and how to resolve approval issues.`,
+    step_name: "qualify_1",
+
   },
   {
     label: 'Qualifier ma plainte',
     description: `Etape potentielle selon selection rpécédente, A TESTER`,
+    step_name: "qualify_2",
   },
   {
     label: 'Ma plainte est prête',
     description: `récap`,
+    step_name: "ready",
+
   },
   {
     label: '',
     description: `bravo`,
+    step_name: "welldone",
   },
 ];
 
@@ -83,7 +95,7 @@ function ReportAnAdd() {
           <Typography>{steps[activeStep].label}</Typography>
         </Paper>
         <Box sx={{ height: 255, maxWidth: 400, width: '100%', p: 2 }}>
-          {steps[activeStep].description}
+          <LoadStepContent step_name={steps[activeStep].step_name} />
         </Box>
         <MobileStepper
           variant="text"
@@ -119,4 +131,20 @@ function ReportAnAdd() {
     );
   }
 
+
+  function LoadStepContent(props: any) {
+    const step_name = props.step_name;
+
+    {/* add check constraint : props.step_name to be in a specific list otherwise raise error ?
+    */}
+    if (step_name == "add_content") {
+      return <AddImage />;
+    }
+    return <h1>étape a coder </h1>;
+  }
+
+  function AddImage() {
+
+    return <h2>Upload an image or provide a URL please :) </h2>
+  }
   export default ReportAnAdd;
