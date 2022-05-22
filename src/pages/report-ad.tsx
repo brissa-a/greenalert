@@ -16,7 +16,7 @@ const steps = [
   },
   {
     label: 'Signaler une pub',
-      step_name: "add_content",
+      step_name: "ad_content",
   },
   {
     label: 'Description',
@@ -48,7 +48,7 @@ const steps = [
   },
 ];
 
-function ReportAnAdd() {
+function ReportAnAd() {
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
     const maxSteps = steps.length;
@@ -119,14 +119,14 @@ function ReportAnAdd() {
 
     {/* add check constraint : props.step_name to be in a specific list otherwise raise error ?
     */}
-    if (step_name == "add_content") {
-      return <AddImage />;
+    if (step_name === "ad_content") {
+      return <AdImage />;
     }
     return <h1>étape a coder </h1>;
   }
 
-  function AddImage() {
+  function AdImage() {
 
     return <h2>Upload an image or provide a URL please :) </h2>
   }
-  export default ReportAnAdd;
+  export default ReportAnAd;
