@@ -9,12 +9,12 @@ import { HomePage } from './pages/HomePage';
 
 function App() {
     return (
-        <div className="App">
-            <header>
+        <div className="App flex flex-col">
+            <header className="flex w-full bg-ga-green text-green-50 justify-center items-center">
                 <h1 className="text-3xl">Green Alert</h1>
             </header>
             <nav>
-                <ul>
+                <ul className='flex flex-row justify-evenly'>
                     <li><a href="/">Home</a></li>
                     <li><a href="/report-an-ad">Signaler une pub</a></li>
                     <li><a href="/about-greenwahsing">Comprendre le Greenwhasing</a></li>
@@ -23,7 +23,7 @@ function App() {
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <main>
+            <main className="flex flex-col items-center justify-center">
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<HomePage/>} />
