@@ -1,18 +1,18 @@
 import React from 'react';
 
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import './App.css';
 import ReportAnAd from './pages/report-ad';
 import AboutGreenwashing from './pages/about-greenwashing';
+import { HomePage } from './pages/HomePage';
 
 function App() {
     return (
         <div className="App">
             <header>
-                <h1>Header</h1>
+                <h1 className="text-3xl">Green Alert</h1>
             </header>
-
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
@@ -26,10 +26,10 @@ function App() {
             <main>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<div>Home Page</div>}/>
-                        <Route path="*" element={<div>404 not found</div>}/>
-                        <Route path="/report-an-ad" element={<ReportAnAd/>} />
-                        <Route path="/about-greenwahsing" element={<AboutGreenwashing/>} />
+                        <Route path="/" element={<HomePage/>} />
+                        <Route path="*" element={<div>404 not found</div>} />
+                        <Route path="/report-an-ad" element={<ReportAnAd />} />
+                        <Route path="/about-greenwahsing" element={<AboutGreenwashing />} />
                     </Routes>
                 </BrowserRouter>
             </main>
